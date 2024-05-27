@@ -1,4 +1,2 @@
-print("hello world")
-name = "sohail"
-age = 38 
-print(name, age  )
+list = [12, 23, 45, 133, 656, 74, 424]
+# print(list)
