@@ -13,7 +13,6 @@ import Profile from './components/Profile/Profile';
 import { AppProvider } from './context/AppContext';
 
 function App() {
-
   return (
       <AppProvider>
         <Navbar/>
@@ -29,8 +28,6 @@ function App() {
         </Routes>
         </AppProvider>
   );
-
-
 }
 
 export default App;
