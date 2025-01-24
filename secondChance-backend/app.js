@@ -8,6 +8,7 @@ const connectToDatabase = require('./models/db');
 const {loadData} = require("./util/import-mongo/index");
 const secondChanceItemsRoutes = require('./routes/secondChanceItemsRoutes');
 const searchRoutes = require('./routes/searchRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 app.use("*",cors());
@@ -23,6 +24,7 @@ app.use(express.json());
 
 app.use('/api/secondchance/items', secondChanceItemsRoutes);
 app.use('/api/secondchance/search', searchRoutes);
+app.use('/api/auth', authRoutes);
 
 const pinoHttp = require('pino-http');
 const logger = require('./logger');
