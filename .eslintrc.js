@@ -21,7 +21,7 @@ module.exports = {
       // Require semicolons
       'semi': ['error', 'always'],
       // Allow both single and double quotes
-      'quotes': ['error', 'single', { 'allowTemplateLiterals': true, 'avoidEscape': true }],
+      'quotes': ['off'],
       // No unused variables
       'no-unused-vars': 'warn',
       // Allow console statements in all environments
