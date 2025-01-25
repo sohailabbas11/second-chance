@@ -5,7 +5,7 @@ const cors = require('cors');
 const pinoLogger = require('./logger');
 
 const connectToDatabase = require('./models/db');
-// const importMongo = require("./util/import-mongo/index");
+const {loadData} = require("./util/import-mongo/index");
 const secondChanceItemsRoutes = require('./routes/secondChanceItemsRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 const authRoutes = require('./routes/authRoutes');
@@ -31,7 +31,6 @@ const logger = require('./logger');
 app.use(pinoHttp({ logger }));
 
 // Global Error Handler
-// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
     console.error(err);
     res.status(500).send('Internal Server Error');
